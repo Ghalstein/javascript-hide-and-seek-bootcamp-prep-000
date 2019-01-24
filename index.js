@@ -10,6 +10,7 @@ function deepestChild(){
   for(let i = 0; i<child.length){
     deepest = child[i].querySelector('div');
   }
+  return deepest;
 }
 function increaseRankBy(n){
   let child = document.getElementById('app').querySelectorAll('ul.ranked-list li')
