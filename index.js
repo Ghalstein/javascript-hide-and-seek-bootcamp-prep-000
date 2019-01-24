@@ -5,8 +5,11 @@ function nestedTarget(){
   return document.querySelector('div#nested div div div div.target');
 }
 function deepestChild(){
-  const child = document.getElementById('app').querySelectorAll('#grande-node div div div div').innerHTML;
-  return child;
+  const child = document.getElementById('#grand-node').querySelectorAll('div');
+  var deepest;
+  for(let i = 0; i<child.length){
+    deepest = child[i].querySelector('div');
+  }
 }
 function increaseRankBy(n){
   let child = document.getElementById('app').querySelectorAll('ul.ranked-list li')
